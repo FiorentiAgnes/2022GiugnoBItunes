@@ -42,10 +42,12 @@ class View(ft.UserControl):
                       vertical_alignment=ft.CrossAxisAlignment.END)
         self._page.controls.append(row2)
 
+        self._dd_album2 = ft.Dropdown(label="Album", hint_text="Seleziona un album", width=300)
+        self._txt_soglia = ft.TextField(label="Soglia x", hint_text="Inserisci un valore numerico", width=300)
         self._btn_percorso = ft.ElevatedButton(text="Cerca Percorso", on_click=self._controller.handlePercorso,
                                                width=200)
 
-        row3 = ft.Row([self._btn_percorso],
+        row3 = ft.Row([self._dd_album2, self._txt_soglia, self._btn_percorso],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row3)
 
